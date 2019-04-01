@@ -32,7 +32,7 @@ Example:
 
 ```javascript
 [
-    {
+  {
     id: 3424,
     title: 'Mexico',
     color: '#0A764F',
