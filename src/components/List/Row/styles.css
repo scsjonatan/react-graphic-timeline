@@ -3,4 +3,9 @@
   display: flex;
   margin: 1rem;
   transition: width 1s;
+  height: 5rem;
+}
+
+.DataRow img {
+  height: 100%;
 }

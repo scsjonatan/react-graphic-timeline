@@ -2,13 +2,16 @@ import React from 'react'
 
 import ExampleComponent from 'graphic'
 
+import { data } from './data'
+
 import './index.css'
 
 export default function App() {
   return (
     <div className="Container">
+      <h1>Random Numbers by Country</h1>
       <div>
-        <h1>Default</h1>
+        <h2>Default</h2>
         <ExampleComponent
           data={data}
           start="2009-03-10"
@@ -16,7 +19,7 @@ export default function App() {
         />
       </div>
        <div className="Container__Styles">
-        <h1>Custom styles</h1>
+        <h2>Custom styles</h2>
         <ExampleComponent
           data={data}
           start="2009-03-10"
@@ -27,64 +30,3 @@ export default function App() {
     </div>
   )
 }
-
-const data = [
-  {
-    id: 3424,
-    title: 'Mexico',
-    color: '#0A764F',
-    data: {
-      '10/03/2009': 15,
-      '11/03/2009': 35,
-      '12/03/2009': 55,
-      '13/03/2009': 75,
-      '14/03/2009': 95,
-      '15/03/2009': 125,
-      '16/03/2009': 15,
-      '17/03/2009': 35,
-      '18/03/2009': 55,
-      '19/03/2009': 75,
-      '20/03/2009': 95,
-      '21/03/2009': 10
-    }
-  },
-  {
-    id: 432,
-    title: 'USA',
-    color: '#002868',
-    data: {
-      '10/03/2009': 25,
-      '11/03/2009': 55,
-      '12/03/2009': 15,
-      '13/03/2009': 55,
-      '14/03/2009': 75,
-      '15/03/2009': 35,
-      '16/03/2009': 45,
-      '17/03/2009': 75,
-      '18/03/2009': 35,
-      '19/03/2009': 55,
-      '20/03/2009': 25,
-      '21/03/2009': 53
-    }
-  },
-  {
-    id: 543,
-    title: 'Canada',
-    color: '#FF0000',
-    data: {
-      '10/03/2009': 135,
-      '11/03/2009': 45,
-      '12/03/2009': 35,
-      '13/03/2009': 65,
-      '14/03/2009': 35,
-      '15/03/2009': 15,
-      '16/03/2009': 55,
-      '17/03/2009': 75,
-      '18/03/2009': 25,
-      '19/03/2009': 95,
-      '20/03/2009': 45,
-      '21/03/2009': 150
-    }
-  },
-]
-

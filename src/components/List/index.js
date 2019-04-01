@@ -58,8 +58,9 @@ function getMaxByDay(data, format) {
 */
 export default function List(props) {
   const { date, maxWidth, setMaxWidth } = useContext(DateContext)
-  const { data, format } = props
+  const { data, format, interval } = props
   setMaxWidth(getMaxByDay(data, format))
+
   return (
     <div className="GraphicTimelineList">
       <FlipMove>
@@ -69,6 +70,7 @@ export default function List(props) {
               key={item.id}
               current={date.format(format)}
               maxWidth={maxWidth}
+              interval={interval}
               {...item}
             />
           ))
@@ -78,11 +80,8 @@ export default function List(props) {
   )
 }
 
-List.defaultProps = {
-  format: 'DD/MM/YYYY'
-}
-
 List.propTypes = {
   data: PropTypes.array.isRequired,
-  format: PropTypes.string
+  format: PropTypes.string.isRequired,
+  interval: PropTypes.number.isRequired
 }

@@ -34,7 +34,7 @@ export default function Component(props) {
         interval={interval}
         addition={addition}
       />
-      <List data={data} />
+      <List data={data} interval={interval} format={format} />
     </DateProvider>
   )
 }
