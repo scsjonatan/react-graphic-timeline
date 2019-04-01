@@ -30,7 +30,7 @@ export default function MyApp() {
 
 Example:
 
-```json
+```javascript
 [
     {
     id: 3424,
