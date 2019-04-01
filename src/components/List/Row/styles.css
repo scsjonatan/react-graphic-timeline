@@ -1,0 +1,6 @@
+.DataRow {
+  background: cyan;
+  display: flex;
+  margin: 1rem;
+  transition: width 1s;
+}
