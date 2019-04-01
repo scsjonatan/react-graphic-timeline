@@ -29,7 +29,7 @@ export default class Row extends Component {
     const width = (value * 100 / maxWidth)
     return (
       <div
-        className={styles.DataRow}
+        className={`${styles.DataRow} GraphicTimeLineRow`}
         style={{
           width: `${width}%`,
           background: color

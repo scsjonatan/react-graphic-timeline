@@ -44,24 +44,16 @@ export default function Counter(props) {
     }
   })
 
-  return <h1>{date.format(format)}</h1>
+  return <h1 className="GraphicTimelineCounter">{date.format(format)}</h1>
 }
 
-Counter.defaultProps = {
-  format: 'DD/MM/YYYY',
-  interval: 1000,
-  addition: {
-    amount: 1,
-    unit: 'days'
-  }
-}
 
 Counter.propTypes = {
   end: PropTypes.string.isRequired,
-  format: PropTypes.string,
-  interval: PropTypes.number,
+  format: PropTypes.string.isRequired,
+  interval: PropTypes.number.isRequired,
   addition: PropTypes.shape({
     amount: PropTypes.number,
     unit: PropTypes.string
-  })
+  }).isRequired
 }

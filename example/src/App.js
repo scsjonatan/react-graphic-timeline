@@ -2,10 +2,28 @@ import React from 'react'
 
 import ExampleComponent from 'graphic'
 
+import './index.css'
+
 export default function App() {
   return (
-    <div>
-      <ExampleComponent data={data} start="2009-03-10" end="2009-03-21" />
+    <div className="Container">
+      <div>
+        <h1>Default</h1>
+        <ExampleComponent
+          data={data}
+          start="2009-03-10"
+          end="2009-03-21"
+        />
+      </div>
+       <div className="Container__Styles">
+        <h1>Custom styles</h1>
+        <ExampleComponent
+          data={data}
+          start="2009-03-10"
+          end="2009-03-21"
+        />
+      </div>
+      
     </div>
   )
 }

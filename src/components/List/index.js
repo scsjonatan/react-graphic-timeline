@@ -61,7 +61,7 @@ export default function List(props) {
   const { data, format } = props
   setMaxWidth(getMaxByDay(data, format))
   return (
-    <div>
+    <div className="GraphicTimelineList">
       <FlipMove>
         {
           reorderData(data, format).map(item => (

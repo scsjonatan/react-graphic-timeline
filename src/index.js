@@ -18,10 +18,22 @@ import { DateProvider } from './contexts'
   * @returns {jsx} Main component jsx
 */
 export default function Component(props) {
-  const { start, end, data } = props
+  const {
+    start,
+    end,
+    data,
+    format,
+    interval,
+    addition
+  } = props
   return (
     <DateProvider start={start}>
-      <Counter end={end} />
+      <Counter
+        end={end}
+        format={format}
+        interval={interval}
+        addition={addition}
+      />
       <List data={data} />
     </DateProvider>
   )
@@ -37,5 +49,20 @@ Component.propTypes = {
       color: PropTypes.string.isRequired,
       data: PropTypes.object.isRequired
     }),
-  ).isRequired
+  ).isRequired,
+  format: PropTypes.string,
+  interval: PropTypes.number,
+  addition: PropTypes.shape({
+    amount: PropTypes.number.isRequired,
+    unit: PropTypes.string.isRequired
+  })
+}
+
+Component.defaultProps = {
+  format: 'DD/MM/YYYY',
+  interval: 1000,
+  addition: {
+    amount: 1,
+    unit: 'days'
+  }
 }
