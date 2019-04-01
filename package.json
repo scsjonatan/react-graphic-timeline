@@ -20,9 +20,9 @@
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "lint": "eslint src/**/*.js*",
+    "lint": "eslint src/**/*.js*"
   },
-   "husky": {
+  "husky": {
     "hooks": {
       "pre-commit": "yarn lint",
       "pre-push": "yarn test"
