@@ -5,6 +5,7 @@
 
 ## Description
 Create graphic timelines for your react apps
+[Demo](https://jonatanscs.github.io/react-graphic-timeline/)
 
 ## Install
 `yarn add react-graphic-timeline`
