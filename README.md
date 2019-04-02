@@ -37,6 +37,7 @@ Example:
     id: 3424,
     title: 'Mexico',
     color: '#0A764F',
+    image: 'https://urlOfImagee.png'
     data: {
       '10/03/2009': 15,
       ...
@@ -50,6 +51,7 @@ Example:
   id: number,
   title: 'String',
   color: [hex, rgb, rgba, any valid css background-color propery value],
+  image: 'String'
   data: {
       'DD/MM/YYYY': number,
   ...
@@ -135,8 +137,8 @@ You can modify styles by overwrite the following classes
 ### List: `.GraphicTimelineList`
 ### Row: `.GraphicTimeLineRow`
 #### Row Title `.GraphicTimeLineRow h1`
-#### Row value `.GraphicTimeLineRow p`
-
+#### Row value `.GraphicTimeLineRow span`
+#### Row image `.GraphicTimeLineRow img`
 
 ## Dependencies
 
@@ -144,9 +146,13 @@ You can modify styles by overwrite the following classes
 
 [momentjs](https://momentjs.com/) is used for management of dates.
 
-
 ### react-flip-move
+
 [react-flip-move](https://github.com/joshwcomeau/react-flip-move) is used for reorder animation of items.
+
+### react-countup
+
+[react-countup](https://www.npmjs.com/package/react-countup) is used for the number count.
 
 
 

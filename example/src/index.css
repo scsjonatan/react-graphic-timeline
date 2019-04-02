@@ -10,8 +10,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   justify-content: space-around;
-  height: 100%;
-  position: absolute;
 }
 
 .Container__Styles .GraphicTimelineCounter {
@@ -27,15 +25,25 @@ body {
   box-shadow: 21px 10px 46px 0px rgba(0,0,0,0.75);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0 1rem;
   height: 2rem;
+  position: relative;
+  margin-left: 5rem;
 }
 
 .Container__Styles .GraphicTimeLineRow h1 {
   font-size: 16px;
 }
 
-.Container__Styles .GraphicTimeLineRow p {
+.Container__Styles .GraphicTimeLineRow span {
   font-weight: bold;
+  position: absolute;
+  right: -4rem;
+}
+
+.Container__Styles .GraphicTimeLineRow img {
+  left: -4rem;
+  position: absolute;
+  width: 50px;
 }
