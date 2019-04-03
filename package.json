@@ -4,7 +4,7 @@
   "description": "Create graphic timelines for your react apps",
   "author": "JonatanSCS",
   "license": "MIT",
-  "repository": "JonatanSCS/react-graphic-timelin",
+  "repository": "JonatanSCS/react-graphic-timeline",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

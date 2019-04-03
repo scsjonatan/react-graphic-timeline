@@ -19,9 +19,10 @@ import { DateContext } from '../../contexts'
   * @returns {array} data reordered
 */
 function reorderData(data, format) {
-  const { date } = useContext(DateContext)
+  const { date, setTopItem } = useContext(DateContext)
   const current = date.format(format)
-  return data.sort((a, b) => {
+
+  const sortedData = data.sort((a, b) => {
     if (a.data[current] > b.data[current]) {
       return -1
     }
@@ -30,6 +31,8 @@ function reorderData(data, format) {
     }
     return 0
   })
+  setTopItem(sortedData[0])
+  return sortedData
 }
 
 /**
@@ -57,10 +60,8 @@ function getMaxByDay(data, format) {
   * @returns {jsx} List component jsx
 */
 export default function List(props) {
-  const { date, maxWidth, setMaxWidth } = useContext(DateContext)
+  const { date, setTopItem } = useContext(DateContext)
   const { data, format, interval } = props
-  setMaxWidth(getMaxByDay(data, format))
-
   return (
     <div className="GraphicTimelineList">
       <FlipMove>
@@ -69,7 +70,7 @@ export default function List(props) {
             <Row
               key={item.id}
               current={date.format(format)}
-              maxWidth={maxWidth}
+              maxWidth={getMaxByDay(data, format)}
               interval={interval}
               {...item}
             />

@@ -7,10 +7,13 @@ import PropTypes from 'prop-types'
 // Components
 import Counter from './components/Counter'
 import List from './components/List'
+import TopElement from './components/TopElement'
 
 // Contexts
 import { DateProvider } from './contexts'
 
+// Styles
+import styles from './styles.css'
 
 /**
   * Main component
@@ -27,13 +30,16 @@ export default function Component(props) {
     addition
   } = props
   return (
-    <DateProvider start={start}>
-      <Counter
-        end={end}
-        format={format}
-        interval={interval}
-        addition={addition}
-      />
+    <DateProvider start={start} data={data}>
+      <div className={styles.ListHeader}>
+        <Counter
+          end={end}
+          format={format}
+          interval={interval}
+          addition={addition}
+        />
+        <TopElement />
+      </div>
       <List data={data} interval={interval} format={format} />
     </DateProvider>
   )
