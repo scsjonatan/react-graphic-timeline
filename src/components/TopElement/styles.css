@@ -1,0 +1,10 @@
+.TopItem {
+  display: flex;
+  align-items: center;
+}
+
+.TopItem img {
+  width: 5rem;
+  height: 3rem;
+  margin: 1rem;
+}
